@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './UI/Theme';
 
-function App() {
+import './App.css';
+import { WelcomePage } from "./Pages/WelcomePage";
+import { FirstStep } from './Pages/FirstStep';
+import { SecondStep } from './Pages/SecondStep';
+
+import { Routes, Route } from "react-router-dom";
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<WelcomePage/>} />
+          <Route path="/step1" element={<FirstStep/>} />
+          <Route path="/step2" element={<SecondStep/>} />
+        </Routes> 
+      </div>
+    </ThemeProvider>
+
   );
 }
 
