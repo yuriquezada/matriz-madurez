@@ -24,7 +24,7 @@ const projects = [
     },
   ];
 
-export const FirstStep = () => {
+export const ThirdStep = () => {
     const [currency, setCurrency] = React.useState('A');
 
     const handleChange = (event) => {
@@ -35,10 +35,10 @@ export const FirstStep = () => {
     <div>
         <Header/>
         <div style={{display: 'flex'}}>
-            <VerticalLinearStepper step={0}/>
+            <VerticalLinearStepper step={2}/>
             <div>
-                <h1>Datos de la aplicación</h1>
-                <h2>Datos principales</h2>
+                <h1>Deudas y servicios</h1>
+                <h2>Deuda técnica</h2>
                 <Box
                     component="form"
                     sx={{
@@ -119,13 +119,13 @@ export const FirstStep = () => {
                     </div>
                 </Box>
                 <h2>Usuarios</h2>
-                <Link to="/step2">
+                <Link to="/step3">
                     <Button variant="contained" color="primary">
-                        Continuar
+                    Continuar
                     </Button>
                 </Link>
-                <Link to="/">
-                    <Button variant="text">
+                <Link to="/step2">
+                    <Button variant="text" >
                         Regresar
                     </Button>
                 </Link>

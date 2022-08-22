@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Header from '../components/Header'
-import { Button, Link, MenuItem, TextField } from '@mui/material'
+import { Button, MenuItem, TextField } from '@mui/material'
 import { Box } from '@mui/system';
+import { Link } from "react-router-dom";
 import VerticalLinearStepper from '../components/VerticalLinearStepper';
 
 const projects = [
@@ -120,10 +121,14 @@ export const SecondStep = () => {
                 <h2>Usuarios</h2>
                 <Link to="/step3">
                     <Button variant="contained" color="primary">
-                    Continuar
+                        Continuar
                     </Button>
                 </Link>
-
+                <Link to="/step1">
+                    <Button variant="text" >
+                        Regresar
+                    </Button>
+                </Link>
             </div>
         </div>
 

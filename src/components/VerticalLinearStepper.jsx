@@ -46,13 +46,13 @@ const steps = [
 export default function VerticalLinearStepper({step}) {
   const [activeStep, setActiveStep] = React.useState(step);
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+//   const handleNext = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//   };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//   };
 
   const handleReset = () => {
     setActiveStep(0);
@@ -74,7 +74,7 @@ export default function VerticalLinearStepper({step}) {
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
-              <Box sx={{ mb: 2 }}>
+              {/* <Box sx={{ mb: 2 }}>
                 <div>
                   <Button
                     variant="contained"
@@ -91,7 +91,7 @@ export default function VerticalLinearStepper({step}) {
                     Back
                   </Button>
                 </div>
-              </Box>
+              </Box> */}
             </StepContent>
           </Step>
         ))}
