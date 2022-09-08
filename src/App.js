@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/step1" element={<FirstStep/>} />
           <Route path="/step2" element={<SecondStep/>} />
           <Route path="/step3" element={<ThirdStep/>} />
-        </Routes> 
+        </Routes>
       </div>
     </ThemeProvider>
 
