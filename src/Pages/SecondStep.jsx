@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Header from '../components/Header'
 import { Button, MenuItem, TextField } from '@mui/material'
 import { Box } from '@mui/system';
 import { Link } from "react-router-dom";
@@ -33,7 +32,6 @@ export const SecondStep = () => {
   
     return (
     <div>
-        <Header/>
         <div style={{display: 'flex'}}>
             <VerticalLinearStepper step={1}/>
             <div>
