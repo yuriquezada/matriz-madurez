@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '@mui/material'
 import { Link } from "react-router-dom";
 
 import { Amplify } from 'aws-amplify';
@@ -26,9 +25,9 @@ const Home = () => {
                   <li>Evaluación de Cloudificacion</li>
               </ol>
               <Link to="/step1">
-                <Button variant="contained" color="primary">
-                  Empezar
-                </Button>
+                  <button>
+                        Empezar
+                  </button>
               </Link>
           </div>
         </main>

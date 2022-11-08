@@ -9,11 +9,21 @@
       "UnauthRoleName": "amplify-matrizmadurez-staging-195235-unauthRole",
       "StackName": "amplify-matrizmadurez-staging-195235",
       "StackId": "arn:aws:cloudformation:us-east-1:136134284065:stack/amplify-matrizmadurez-staging-195235/fae67ca0-18e5-11ed-a458-0a46d9dd22dd",
-      "AmplifyAppId": "d26f8aux2kd034"
+      "AmplifyAppId": "d26f8aux2kd034",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-matrizmadurez-staging-195235-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
         "matrizmadurez179e406d": {}
+      },
+      "function": {
+        "matrizmadurezd6981e37": {
+          "deploymentBucketName": "amplify-matrizmadurez-staging-195235-deployment",
+          "s3Key": "amplify-builds/matrizmadurezd6981e37-544c4131373650697867-build.zip"
+        }
+      },
+      "api": {
+        "apie100b077": {}
       }
     }
   }
