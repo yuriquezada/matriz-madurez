@@ -1305,11 +1305,11 @@ export default createTheme({
       default: {
         variable: {
           value:
-            "'InterVariable', 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont,\n        'Helvetica Neue', 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans',\n        sans-serif",
+            "'InterVariable', 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont,\n        'Helvetica Neue', 'Lato', 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans',\n        sans-serif",
         },
         static: {
           value:
-            "'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',\n        'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif",
+            "'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',\n        'Lato', 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif",
         },
       },
     },

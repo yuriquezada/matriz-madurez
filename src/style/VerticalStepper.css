@@ -1,4 +1,4 @@
-.container {
+.vertical-stepper {
     width: 25%;
   }
   
@@ -76,11 +76,3 @@
     display: inline-block;
   }
   
-  
-  /* codepen override */
-  html *
-  {
-     font-size: 15px !important;
-     color: #000 !important;
-     font-family: Arial !important;
-  }
