@@ -4,6 +4,7 @@
       'Lato','Roboto','Helvetica','Arial',sans-serif;
       position: relative;
       width: 350px;
+      padding-top: 15px;
   }
   
   .select-text {
@@ -11,8 +12,8 @@
       font-family: inherit;
       background-color: transparent;
       width: 350px;
-      padding: 10px 10px 10px 0;
-      font-size: 18px;
+      padding: 7px 7px 7px 0;
+      font-size: 16px;
       border-radius: 0;
       border: none;
       border-bottom: 1px solid rgba(0,0,0, 0.12);
@@ -32,7 +33,7 @@
   
   .select:after {
       position: absolute;
-      top: 18px;
+      top: 28px;
       right: 10px;
       /* Styling the down arrow */
       width: 0;
@@ -49,19 +50,19 @@
   /* LABEL ======================================= */
   .select-label {
       color: rgba(0,0,0, 0.26);
-      font-size: 18px;
+      font-size: 16px;
       font-weight: normal;
       position: absolute;
       pointer-events: none;
       left: 0;
-      top: 10px;
+      top: 20px;
       transition: 0.2s ease all;
   }
   
   /* active state */
   .select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
       color: #2F80ED;
-      top: -20px;
+      top: 0px;
       transition: 0.2s ease all;
       font-size: 14px;
   }

@@ -1,0 +1,11 @@
+.form-inputs {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .form-inputs {
+        grid-template-columns: 1fr 1fr;
+    }
+}

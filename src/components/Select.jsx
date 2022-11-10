@@ -1,17 +1,22 @@
 import React from 'react';
 import '../style/Select.css';
-function Select() {
+
+function Select(props) {
+    const options = props.options;
+    const listOptions = options.map((option) =>
+      <option key={option.toString()}>
+        {option}
+      </option>
+    );
     return (
         <div class="select">
             <select class="select-text" required>
                 <option value="" disabled selected></option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                {listOptions}
             </select>
             <span class="select-highlight"></span>
             <span class="select-bar"></span>
-            <label class="select-label">Select</label>
+            <label class="select-label">{props.label}</label>
         </div>
     );
 }
