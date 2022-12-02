@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../style/CheckBox.css";
 
 function CheckBox(props) {
+
     return (
         <label class="pure-material-checkbox">
-            <input checked={props.checked}
-              onChange={props.handleChange} type="checkbox"/>
+            <input onChange={props.onChange} checked={props.checked}
+               type="checkbox"/>
             <span>{props.label}</span>
         </label>
     );

@@ -43,17 +43,14 @@ export const FirstStep = () => {
           </form>
           {/* */}
           {checked && (
-            <div className="form-group col-lg-2 col-md-4 col-sm-8">
-                Holaaaaaa
+            <div>
+              <h4 style={{ marginBottom: ".5rem" }}>Internos</h4>
+              <form className="form-inputs">
+                <TextArea label={"Descripción técnica de la solución"} />
+                <TextArea label={"Objetivos del proyecto"} />
+              </form>
             </div>
           )}
-          <div>
-            <h4 style={{ marginBottom: ".5rem" }}>Internos</h4>
-            <form className="form-inputs">
-              <TextArea label={"Descripción técnica de la solución"} />
-              <TextArea label={"Objetivos del proyecto"} />
-            </form>
-          </div>
           <div>
             <h4 style={{ marginBottom: ".5rem" }}>Externos</h4>
             <form className="form-inputs">
