@@ -9,12 +9,25 @@ import "../style/Form.css";
 import TextArea from "../components/TextArea";
 import CheckBox from "../components/CheckBox";
 
-export const FirstStep = () => {
-  const [checked, setChecked] = useState(false);
+const allTypesUsers = [
+  { name: "Internos", checked: false },
+  { name: "Externos", checked: false },
+  { name: "Aplicación", checked: false }
+]
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+export const FirstStep = () => {
+  const [typesUsers, setTypesUsers] = useState(allTypesUsers)
+
+  const updateCheckStatus = index => {
+    setTypesUsers(
+      typesUsers.map((userType, currentIndex) =>
+        currentIndex === index
+          ? { ...userType, checked: !userType.checked }
+          : userType
+      )
+    )
+  }
+
 
   return (
     <div>
@@ -33,31 +46,26 @@ export const FirstStep = () => {
           </form>
           <h3>Usuarios</h3>
           <form className="form-users">
-            <CheckBox
-              checked={checked}
-              onChange={handleChange}
-              label={"Internos"}
-            />
-            {/* <CheckBox label={"Externos"} />
-            <CheckBox label={"Aplicación   "} /> */}
+            {typesUsers.map((userType, index) => (
+                    <CheckBox
+                      key={userType.name}
+                      isChecked={userType.checked}
+                      onChange={() => updateCheckStatus(index)}
+                      label={userType.name}
+                      index={index}
+                    />
+                  ))}
           </form>
-          {/* */}
-          {checked && (
-            <div>
-              <h4 style={{ marginBottom: ".5rem" }}>Internos</h4>
-              <form className="form-inputs">
-                <TextArea label={"Descripción técnica de la solución"} />
-                <TextArea label={"Objetivos del proyecto"} />
-              </form>
-            </div>
-          )}
-          <div>
-            <h4 style={{ marginBottom: ".5rem" }}>Externos</h4>
-            <form className="form-inputs">
-              <TextArea label={"Descripción técnica de la solución"} />
-              <TextArea label={"Objetivos del proyecto"} />
-            </form>
-          </div>
+          {typesUsers.filter(userType => userType.checked === true).map((userType) => (
+              <div>
+                <h4 style={{ marginBottom: ".5rem" }}>{userType.name}</h4>
+                <form className="form-inputs">
+                  <TextArea label={"Descripción técnica de la solución"} />
+                  <TextArea label={"Objetivos del proyecto"} />
+                </form>
+              </div>
+            ))
+          }
           <Link to="/">
             <button>Regresar</button>
           </Link>
