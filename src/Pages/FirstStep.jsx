@@ -30,9 +30,8 @@ export const FirstStep = () => {
 
 
   return (
-    <div>
       <div style={{ display: "flex" }}>
-        <div style={{ margin: "auto", maxWidth: "800px", textAlign: "left" }}>
+        <div style={{ margin: "auto", width: "100%", maxWidth: "800px", textAlign: "left" }}>
           <h2>Datos de la aplicación</h2>
           <h3>Datos principales</h3>
           <form className="form-inputs">
@@ -75,6 +74,5 @@ export const FirstStep = () => {
         </div>
         <VerticalStepper step={1} />
       </div>
-    </div>
   );
 };
