@@ -1,13 +1,13 @@
 import React from 'react';
 import "../style/CheckBox.css";
 
-function CheckBox(props) {
+function CheckBox({onChange, checked, label}) {
 
     return (
         <label class="pure-material-checkbox">
-            <input onChange={props.onChange} checked={props.checked}
+            <input onChange={onChange} checked={checked}
                type="checkbox"/>
-            <span>{props.label}</span>
+            <span>{label}</span>
         </label>
     );
 }
