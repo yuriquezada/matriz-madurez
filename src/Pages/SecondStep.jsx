@@ -7,13 +7,13 @@ import VerticalStepper from '../components/VerticalStepper';
 
 export const SecondStep = () => {
     const [inputValue, setInputValue] = useState("")
-    console.log(inputValue)
 
     const handleChange = event => {
         setInputValue(event.target.value);
       };
 
     const [data, setData] = useState([]);
+
     const append = () => {
         setData([...data, inputValue]);
         setInputValue("")
@@ -26,13 +26,20 @@ export const SecondStep = () => {
             <div style={{ margin: "auto", width: "100%", maxWidth: "800px", textAlign: "left" }}>
                 <h1>Deudas y servicios</h1>
                 <h2>Deuda técnica</h2>
-                <h3>Deuda técnica solución</h3>
-                <div>
+                <h3>Deuda técnica de solución</h3>
+                <CheckListInput placeholder={"Descripción técnica de la solución"} action={append} onChange={handleChange} value={inputValue}/>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
                     {data.map((item) => (
                         <CheckListItem label={item}/>
                     ))}
                 </div>
-                <CheckListInput placeholder={"Descripción técnica de la solución"} action={append} onChange={handleChange} value={inputValue}/>
+                <h3>Deuda técnica de capacidades empresariales</h3>
+                {/* <CheckListInput placeholder={"Descripción técnica de las capacidades empresariales"} action={append} onChange={handleChange} value={inputValue}/>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    {data.map((item) => (
+                        <CheckListItem label={item}/>
+                    ))}
+                </div> */}
                 <Link to="/step1">
                     <button>
                         Regresar
