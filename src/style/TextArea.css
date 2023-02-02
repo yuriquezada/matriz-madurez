@@ -26,8 +26,7 @@
   top: 20px;
 }
 
-label,
-.form__field:focus ~ .form__label {
+.form__field:focus ~ .form__label , .form__label {
   position: absolute;
   top: 0;
   display: block;
