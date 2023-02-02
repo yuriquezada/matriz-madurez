@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Select from "../components/Select";
 import { architectArray, projectArray } from "../data/firstStep";
 import "../style/Form.css";
-// import Input from '../components/Input';
 import TextArea from "../components/TextArea";
 import CheckBox from "../components/CheckBox";
 
@@ -32,6 +31,9 @@ export const FirstStep = () => {
   return (
       <div style={{ display: "flex" }}>
         <div style={{ margin: "auto", width: "100%", maxWidth: "800px", textAlign: "left" }}>
+          <Link to="/">
+            <button>Regresar</button>
+          </Link>
           <h2>Datos de la aplicación</h2>
           <h3>Datos principales</h3>
           <form className="form-inputs">
@@ -65,9 +67,6 @@ export const FirstStep = () => {
               </div>
             ))
           }
-          <Link to="/">
-            <button>Regresar</button>
-          </Link>
           <Link to="/step2">
             <button>Continuar</button>
           </Link>
