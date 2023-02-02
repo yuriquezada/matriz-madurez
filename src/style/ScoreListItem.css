@@ -1,0 +1,7 @@
+.scorelistitem{
+    width: 20px;
+    display: flex;
+}
+.input__score{
+    width: 48px;
+}
