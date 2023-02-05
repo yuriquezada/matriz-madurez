@@ -1,4 +1,5 @@
 import * as React from "react";
+import "../style/Page.css";
 import { useState } from "react"
 import VerticalStepper from "../components/VerticalStepper";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import { architectArray, projectArray } from "../data/firstStep";
 import "../style/Form.css";
 import TextArea from "../components/TextArea";
 import CheckBox from "../components/CheckBox";
+import Background from "../components/Background";
 
 const allTypesUsers = [
   { name: "Internos", checked: false },
@@ -26,11 +28,12 @@ export const FirstStep = () => {
       )
     )
   }
-
-
+  
   return (
-      <div style={{ display: "flex" }}>
-        <div style={{ margin: "auto", width: "100%", maxWidth: "800px", textAlign: "left" }}>
+      <div className="step-page">
+        <Background/>
+        <VerticalStepper numberStep={1} />
+        <div className="step-content">
           <Link to="/">
             <button>Regresar</button>
           </Link>
@@ -71,7 +74,6 @@ export const FirstStep = () => {
             <button>Continuar</button>
           </Link>
         </div>
-        <VerticalStepper step={1} />
       </div>
   );
 };
