@@ -33,7 +33,7 @@ export const SecondStep = () => {
                     </button>
                 </Link>
             </div>
-            <VerticalStepper step={2}/>
+            <VerticalStepper numberStep={2}/>
         </div>
     )
 }

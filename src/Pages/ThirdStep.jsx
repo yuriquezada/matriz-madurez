@@ -34,7 +34,7 @@ export const ThirdStep = () => {
                     </button>
                 </Link>
             </div>
-            <VerticalStepper step={3}/>
+            <VerticalStepper numberStep={3}/>
         </div>
     )
 }

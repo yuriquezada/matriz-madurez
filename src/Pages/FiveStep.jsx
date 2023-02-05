@@ -6,10 +6,6 @@ import VerticalStepper from '../components/VerticalStepper';
 import { cloudification } from '../data/cloudification';
 
 export const FiveStep = () => {
-    // const [solutionDebts, setSolutionDebts] = useState([]);
-    // const [businessDebts, setBusinessDebts] = useState([]);
-    // const [awsServices, setAwsServices] = useState([]);
-
     return (
         <div style={{display: 'flex'}}>
             <div style={{ margin: "auto", width: "100%", maxWidth: "800px", textAlign: "left" }}>
@@ -31,7 +27,7 @@ export const FiveStep = () => {
                     </button>
                 </Link>
             </div>
-            <VerticalStepper step={4}/>
+            <VerticalStepper numberStep={5}/>
         </div>
     )
 }

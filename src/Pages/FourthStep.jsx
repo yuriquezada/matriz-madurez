@@ -27,7 +27,7 @@ export const FourthStep = () => {
                     </button>
                 </Link>
             </div>
-            <VerticalStepper step={4}/>
+            <VerticalStepper numberStep={4}/>
         </div>
     )
 }

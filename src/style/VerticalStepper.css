@@ -1,78 +1,77 @@
 .vertical-stepper {
-    width: 25%;
-  }
-  
-  .step {
-    
-    padding: 10px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
-    background-color: cream;
-  }
-  
-  .v-stepper {
-    position: relative;
-  /*   visibility: visible; */
-  }
-  
-  
-  /* regular step */
-  .step .circle {
-    background-color: white;
-    border: 3px solid gray;
-    border-radius: 100%;
-    width: 20px;    /* +6 for border */
-    height: 20px;
-    display: inline-block;
-  }
-  
-  .step .line {
-      top: 23px;
-    left: 12px;
-  /*   height: 120px; */
-    height: 100%;
-      
-      position: absolute;
-      border-left: 3px solid gray;
-  }
-  
-  .step.completed .circle {
-    visibility: visible;
-    background-color: rgb(6,150,215);
-    border-color: rgb(6,150,215);
-  }
-  
-  .step.completed .line {
-    border-left: 3px solid rgb(6,150,215);
-  }
-  
-  .step.active .circle {
+  width: 64%;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+
+.step {
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: cream;
+}
+
+.v-stepper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.step .circle {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  min-width: 24px;
+}
+
+.step .line {
+  height: 40px;
+  border-left: 2px solid gray;
+}
+
+.step.completed .circle {
   visibility: visible;
-    border-color: rgb(6,150,215);
-  }
-  
-  .step.empty .circle {
-      visibility: hidden;
-  }
-  
-  .step.empty .line {
-  /*     visibility: hidden; */
-  /*   height: 150%; */
-    top: 0;
-    height: 150%;
-  }
-  
-  
-  .step:last-child .line {
-    border-left: 3px solid white;
-    z-index: -1; /* behind the circle to completely hide */
-  }
-  
-  .content {
-    margin-left: 20px;
-    display: inline-block;
-  }
-  
+  background-color: var(--white);
+  border: 2px solid var(--blueberry);
+  color: var(--blueberry);
+}
+
+.step.completed .line {
+  border-left: 2px solid var(--blueberry);
+}
+
+.step.active .circle {
+  visibility: visible;
+  background-color: var(--blueberry);
+  color: var(--white);
+}
+
+.step.empty .circle {
+  visibility: visible;
+  background-color: var(--white);
+  border: 2px solid var(--neutral_600);
+  color: var(--neutral_600);
+}
+
+.step.empty .line {
+  top: 0;
+  border-left: 2px dashed var(--neutral_600);
+}
+
+
+.step:last-child .line {
+  border-left: 2px solid white;
+  z-index: -1;
+  /* behind the circle to completely hide */
+}
+
+.content {
+  margin-left: 20px;
+  display: inline-block;
+}
