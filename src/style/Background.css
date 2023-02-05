@@ -1,0 +1,44 @@
+@media only screen and (min-width: 768px){
+    .rbr-hide-tablet-on-up {
+    display: none !important;
+}
+}
+
+.rbr-hide-tablet-on-up {
+    display: block !important;
+}
+
+.side-medium {
+    width: 345.6px;
+    width: var(--side-medium-width);
+    height: 870.4px;
+    height: var(--side-medium-height);
+}
+
+.aqua-aqua {
+    --first-color: #00F4E2;
+    --second-color: #00F4E2;
+}
+
+.bean-middle-medium {
+    background: radial-gradient(farthest-side, var(--second-color) 98%, transparent) 1px 12px/170px 170px, radial-gradient(farthest-side, var(--second-color) 98%, transparent) -11px 92px/195px 195px, radial-gradient(farthest-side, var(--second-color) 98%, transparent) 130px 177px/131px 131px, radial-gradient(farthest-side, var(--first-color) 98%, transparent) 55px 168px/195px 195px, radial-gradient(farthest-side, var(--first-color) 98%, transparent) 39px 258px/220px 220px, radial-gradient(farthest-side, var(--first-color) 98%, transparent) 193px 362px/150px 150px;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.bean-middle-medium {
+    background: radial-gradient(farthest-side, var(--second-color) 98%, transparent) 1px 12px/170px 170px,radial-gradient(farthest-side, var(--second-color) 98%, transparent) -11px 92px/195px 195px,radial-gradient(farthest-side, var(--second-color) 98%, transparent) 130px 177px/131px 131px,radial-gradient(farthest-side, var(--first-color) 98%, transparent) 55px 168px/195px 195px,radial-gradient(farthest-side, var(--first-color) 98%, transparent) 39px 258px/220px 220px,radial-gradient(farthest-side, var(--first-color) 98%, transparent) 193px 362px/150px 150px;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.violet-violet {
+    --first-color: #C333FF;
+    --second-color: #C333FF;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+.absolute {
+    position: absolute;
+}
