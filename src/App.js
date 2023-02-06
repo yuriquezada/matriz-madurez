@@ -21,8 +21,7 @@ const App = () => {
       <Authenticator>
         {({ signOut, user }) => (
           <div className="App">
-            <Header/>
-            <button onClick={signOut}>Sign out</button>
+            <Header action={signOut}/>
             <Routes>
               <Route path="/" element={<Home/>} />
               <Route path="/step1" element={<FirstStep/>} />

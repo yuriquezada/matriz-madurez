@@ -17,13 +17,13 @@ const logoStyle = {
   height: "24px",
 };
 
-function Header() {
+function Header({action}) {
   return (
       <div style={headerStyle}>
         <Link to="/">
           <img src={logo} style={logoStyle} alt="logo" />
         </Link>
-        {/* <button onClick={action}>Sign out</button> */}
+        <button onClick={action}>Sign out</button>
       </div>
   );
 }
